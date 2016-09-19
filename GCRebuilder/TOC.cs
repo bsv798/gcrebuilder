@@ -641,6 +641,12 @@ namespace GCRebuilder
             return true;
         }
 
+        public void Rebuild(string path)
+        {
+            imgPath = path;
+            Rebuild();
+        }
+
         private void Rebuild()
         {
             sio.FileStream fsw = null;
@@ -1082,7 +1088,7 @@ namespace GCRebuilder
                     else
                         if (stopCurrProc)
                             MessageBox.Show(this, "Process cancelled", "Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        else
+                        else if (showLastDialog)
                             MessageBox.Show("Done", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //this.tvTOC.LabelEdit = true;

@@ -238,6 +238,16 @@ namespace GCRebuilder
             return error;
         }
 
+        public void Export(string expPath)
+        {
+            expImpPath = expPath;
+            expImpIdx = Convert.ToInt32(selNode.Name);
+            if (toc.fils[expImpIdx].isDir)
+                ExportDir();
+            else
+                Export(expImpIdx, expPath);
+        }
+
         private void ExportDir()
         {
             //FolderBrowserDialog fbd;
@@ -400,6 +410,11 @@ namespace GCRebuilder
 
         private void ImportDir(int idx, string impPath)
         {
+        }
+
+        public void Import(string impPath)
+        {
+            Import(Convert.ToInt32(selNode.Name), impPath);
         }
 
         private void Import(int idx, string impPath)

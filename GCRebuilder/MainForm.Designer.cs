@@ -135,8 +135,8 @@
             this.tvTOC.TabIndex = 8;
             this.tvTOC.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.tvTOC_AfterLabelEdit);
             this.tvTOC.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvTOC_AfterSelect);
-            this.tvTOC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tvTOC_MouseDown);
             this.tvTOC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tvTOC_KeyDown);
+            this.tvTOC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tvTOC_MouseDown);
             // 
             // cmsTVTOC
             // 
@@ -150,13 +150,13 @@
             this.miRename,
             this.miCancel});
             this.cmsTVTOC.Name = "cmsTVTOC";
-            this.cmsTVTOC.Size = new System.Drawing.Size(166, 148);
+            this.cmsTVTOC.Size = new System.Drawing.Size(165, 170);
             this.cmsTVTOC.Opening += new System.ComponentModel.CancelEventHandler(this.cmsTVTOC_Opening);
             // 
             // miImport
             // 
             this.miImport.Name = "miImport";
-            this.miImport.Size = new System.Drawing.Size(165, 22);
+            this.miImport.Size = new System.Drawing.Size(164, 22);
             this.miImport.Text = "Import…";
             this.miImport.Visible = false;
             this.miImport.Click += new System.EventHandler(this.miImport_Click);
@@ -164,7 +164,7 @@
             // miExport
             // 
             this.miExport.Name = "miExport";
-            this.miExport.Size = new System.Drawing.Size(165, 22);
+            this.miExport.Size = new System.Drawing.Size(164, 22);
             this.miExport.Text = "Export…";
             this.miExport.Visible = false;
             this.miExport.Click += new System.EventHandler(this.miExport_Click);
@@ -172,13 +172,13 @@
             // misep1
             // 
             this.misep1.Name = "misep1";
-            this.misep1.Size = new System.Drawing.Size(162, 6);
+            this.misep1.Size = new System.Drawing.Size(161, 6);
             this.misep1.Visible = false;
             // 
             // miImpFT
             // 
             this.miImpFT.Name = "miImpFT";
-            this.miImpFT.Size = new System.Drawing.Size(165, 22);
+            this.miImpFT.Size = new System.Drawing.Size(164, 22);
             this.miImpFT.Text = "Import from-to…";
             this.miImpFT.Visible = false;
             this.miImpFT.Click += new System.EventHandler(this.miImpFT_Click);
@@ -186,7 +186,7 @@
             // miExpFT
             // 
             this.miExpFT.Name = "miExpFT";
-            this.miExpFT.Size = new System.Drawing.Size(165, 22);
+            this.miExpFT.Size = new System.Drawing.Size(164, 22);
             this.miExpFT.Text = "Export from-to…";
             this.miExpFT.Visible = false;
             this.miExpFT.Click += new System.EventHandler(this.miExpFT_Click);
@@ -194,13 +194,13 @@
             // misep2
             // 
             this.misep2.Name = "misep2";
-            this.misep2.Size = new System.Drawing.Size(162, 6);
+            this.misep2.Size = new System.Drawing.Size(161, 6);
             this.misep2.Visible = false;
             // 
             // miRename
             // 
             this.miRename.Name = "miRename";
-            this.miRename.Size = new System.Drawing.Size(165, 22);
+            this.miRename.Size = new System.Drawing.Size(164, 22);
             this.miRename.Text = "Rename";
             this.miRename.Visible = false;
             this.miRename.Click += new System.EventHandler(this.miRename_Click);
@@ -208,7 +208,7 @@
             // miCancel
             // 
             this.miCancel.Name = "miCancel";
-            this.miCancel.Size = new System.Drawing.Size(165, 22);
+            this.miCancel.Size = new System.Drawing.Size(164, 22);
             this.miCancel.Text = "Cancel";
             this.miCancel.Visible = false;
             this.miCancel.Click += new System.EventHandler(this.miCancel_Click);
@@ -328,9 +328,9 @@
             // sslblAction
             // 
             this.sslblAction.AutoSize = false;
-            this.sslblAction.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.sslblAction.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.sslblAction.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.sslblAction.Name = "sslblAction";
             this.sslblAction.Size = new System.Drawing.Size(256, 17);
@@ -431,7 +431,7 @@
             // tbBDDescription
             // 
             this.tbBDDescription.Enabled = false;
-            this.tbBDDescription.Font = new System.Drawing.Font("MS Mincho", 9.25F);
+            this.tbBDDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.tbBDDescription.Location = new System.Drawing.Point(78, 176);
             this.tbBDDescription.MaxLength = 127;
             this.tbBDDescription.Multiline = true;
@@ -501,11 +501,11 @@
             // tbBDLongMaker
             // 
             this.tbBDLongMaker.Enabled = false;
-            this.tbBDLongMaker.Font = new System.Drawing.Font("MS Mincho", 9.25F);
+            this.tbBDLongMaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.tbBDLongMaker.Location = new System.Drawing.Point(78, 150);
             this.tbBDLongMaker.MaxLength = 63;
             this.tbBDLongMaker.Name = "tbBDLongMaker";
-            this.tbBDLongMaker.Size = new System.Drawing.Size(353, 20);
+            this.tbBDLongMaker.Size = new System.Drawing.Size(353, 21);
             this.tbBDLongMaker.TabIndex = 21;
             // 
             // lblBDLongMaker
@@ -521,11 +521,11 @@
             // tbBDLongName
             // 
             this.tbBDLongName.Enabled = false;
-            this.tbBDLongName.Font = new System.Drawing.Font("MS Mincho", 9.25F);
+            this.tbBDLongName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.tbBDLongName.Location = new System.Drawing.Point(78, 124);
             this.tbBDLongName.MaxLength = 63;
             this.tbBDLongName.Name = "tbBDLongName";
-            this.tbBDLongName.Size = new System.Drawing.Size(353, 20);
+            this.tbBDLongName.Size = new System.Drawing.Size(353, 21);
             this.tbBDLongName.TabIndex = 19;
             // 
             // lblBDLongName
@@ -541,11 +541,11 @@
             // tbBDShortMaker
             // 
             this.tbBDShortMaker.Enabled = false;
-            this.tbBDShortMaker.Font = new System.Drawing.Font("MS Mincho", 9.25F);
+            this.tbBDShortMaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.tbBDShortMaker.Location = new System.Drawing.Point(78, 98);
             this.tbBDShortMaker.MaxLength = 31;
             this.tbBDShortMaker.Name = "tbBDShortMaker";
-            this.tbBDShortMaker.Size = new System.Drawing.Size(353, 20);
+            this.tbBDShortMaker.Size = new System.Drawing.Size(353, 21);
             this.tbBDShortMaker.TabIndex = 17;
             // 
             // lblBDShortMaker
@@ -582,11 +582,11 @@
             // tbBDShortName
             // 
             this.tbBDShortName.Enabled = false;
-            this.tbBDShortName.Font = new System.Drawing.Font("MS Mincho", 9.25F);
+            this.tbBDShortName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.tbBDShortName.Location = new System.Drawing.Point(78, 72);
             this.tbBDShortName.MaxLength = 31;
             this.tbBDShortName.Name = "tbBDShortName";
-            this.tbBDShortName.Size = new System.Drawing.Size(353, 20);
+            this.tbBDShortName.Size = new System.Drawing.Size(353, 21);
             this.tbBDShortName.TabIndex = 1;
             // 
             // lblBDShortName
@@ -626,14 +626,14 @@
             this.toolStripMenuItem2,
             this.miRootExit});
             this.miRoot.Name = "miRoot";
-            this.miRoot.Size = new System.Drawing.Size(42, 20);
+            this.miRoot.Size = new System.Drawing.Size(44, 20);
             this.miRoot.Text = "Root";
             // 
             // miRootOpen
             // 
             this.miRootOpen.Image = global::GCRebuilder.Properties.Resources.root_open;
             this.miRootOpen.Name = "miRootOpen";
-            this.miRootOpen.Size = new System.Drawing.Size(120, 22);
+            this.miRootOpen.Size = new System.Drawing.Size(114, 22);
             this.miRootOpen.Text = "Open…";
             this.miRootOpen.Click += new System.EventHandler(this.miRootOpen_Click);
             // 
@@ -641,7 +641,7 @@
             // 
             this.miRootSave.Image = global::GCRebuilder.Properties.Resources.root_save;
             this.miRootSave.Name = "miRootSave";
-            this.miRootSave.Size = new System.Drawing.Size(120, 22);
+            this.miRootSave.Size = new System.Drawing.Size(114, 22);
             this.miRootSave.Text = "Save…";
             this.miRootSave.Click += new System.EventHandler(this.miRootSave_Click);
             // 
@@ -650,34 +650,34 @@
             this.miRootClose.Enabled = false;
             this.miRootClose.Image = global::GCRebuilder.Properties.Resources.root_close;
             this.miRootClose.Name = "miRootClose";
-            this.miRootClose.Size = new System.Drawing.Size(120, 22);
+            this.miRootClose.Size = new System.Drawing.Size(114, 22);
             this.miRootClose.Text = "Close";
             this.miRootClose.Click += new System.EventHandler(this.miRootClose_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(117, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 6);
             // 
             // miRootStart
             // 
             this.miRootStart.Enabled = false;
             this.miRootStart.Image = global::GCRebuilder.Properties.Resources.root_run;
             this.miRootStart.Name = "miRootStart";
-            this.miRootStart.Size = new System.Drawing.Size(120, 22);
+            this.miRootStart.Size = new System.Drawing.Size(114, 22);
             this.miRootStart.Text = "Rebuild";
             this.miRootStart.Click += new System.EventHandler(this.miRootStart_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(117, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(111, 6);
             // 
             // miRootExit
             // 
             this.miRootExit.Image = global::GCRebuilder.Properties.Resources.exit;
             this.miRootExit.Name = "miRootExit";
-            this.miRootExit.Size = new System.Drawing.Size(120, 22);
+            this.miRootExit.Size = new System.Drawing.Size(114, 22);
             this.miRootExit.Text = "Exit";
             this.miRootExit.Click += new System.EventHandler(this.miRootExit_Click);
             // 
@@ -692,7 +692,7 @@
             this.toolStripSeparator2,
             this.miImageExit});
             this.miImage.Name = "miImage";
-            this.miImage.Size = new System.Drawing.Size(49, 20);
+            this.miImage.Size = new System.Drawing.Size(52, 20);
             this.miImage.Text = "Image";
             // 
             // miImageOpen
@@ -746,21 +746,21 @@
             this.miOptionsModifySystemFiles,
             this.miOptionsDoNotUseGameToc});
             this.miOptions.Name = "miOptions";
-            this.miOptions.Size = new System.Drawing.Size(56, 20);
+            this.miOptions.Size = new System.Drawing.Size(61, 20);
             this.miOptions.Text = "Options";
             // 
             // miOptionsModifySystemFiles
             // 
             this.miOptionsModifySystemFiles.CheckOnClick = true;
             this.miOptionsModifySystemFiles.Name = "miOptionsModifySystemFiles";
-            this.miOptionsModifySystemFiles.Size = new System.Drawing.Size(189, 22);
+            this.miOptionsModifySystemFiles.Size = new System.Drawing.Size(190, 22);
             this.miOptionsModifySystemFiles.Text = "Modify system files";
             // 
             // miOptionsDoNotUseGameToc
             // 
             this.miOptionsDoNotUseGameToc.CheckOnClick = true;
             this.miOptionsDoNotUseGameToc.Name = "miOptionsDoNotUseGameToc";
-            this.miOptionsDoNotUseGameToc.Size = new System.Drawing.Size(189, 22);
+            this.miOptionsDoNotUseGameToc.Size = new System.Drawing.Size(190, 22);
             this.miOptionsDoNotUseGameToc.Text = "Do not use \'game.toc\'";
             // 
             // miHelp
@@ -769,14 +769,14 @@
             this.miHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miHelpAbout});
             this.miHelp.Name = "miHelp";
-            this.miHelp.Size = new System.Drawing.Size(40, 20);
+            this.miHelp.Size = new System.Drawing.Size(44, 20);
             this.miHelp.Text = "Help";
             // 
             // miHelpAbout
             // 
             this.miHelpAbout.Image = global::GCRebuilder.Properties.Resources.about;
             this.miHelpAbout.Name = "miHelpAbout";
-            this.miHelpAbout.Size = new System.Drawing.Size(114, 22);
+            this.miHelpAbout.Size = new System.Drawing.Size(107, 22);
             this.miHelpAbout.Text = "About";
             this.miHelpAbout.Click += new System.EventHandler(this.miHelpAbout_Click);
             // 
@@ -945,7 +945,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "GCRebuilder v1.0";
+            this.Text = "GCRebuilder v1.1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.cmsTVTOC.ResumeLayout(false);

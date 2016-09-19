@@ -49,10 +49,13 @@ namespace GCRebuilder
         System.Threading.ThreadStart ths;
         System.Threading.Thread th;
 
-        public static string[] args;
+        private string[] args;
+        private bool showLastDialog;
 
-        public MainForm()
+        public MainForm(string[] args)
         {
+            this.args = args;
+
             InitializeComponent();
 
             this.tbBDShortName.TextChanged += new EventHandler(bnrInfoChanged);
@@ -185,19 +188,35 @@ namespace GCRebuilder
             return !error;
         }
 
-        private void LoadArgs(string arg)
+        public bool IsImagePath(string arg)
         {
             sio.FileInfo fi;
+
+            fi = new sio.FileInfo(arg);
+
+            if (fi.Exists)
+                return true;
+            return false;
+        }
+
+        public bool IsRootPath(string arg)
+        {
             sio.DirectoryInfo di;
 
+            di = new sio.DirectoryInfo(arg);
+
+            if (di.Exists)
+                return true;
+            return false;
+        }
+
+        private void LoadArgs(string arg)
+        {
             try
             {
-                fi = new sio.FileInfo(arg);
-                di = new sio.DirectoryInfo(arg);
-
-                if (fi.Exists)
+                if (IsImagePath(arg))
                     ImageOpen(arg);
-                else if (di.Exists)
+                else if (IsRootPath(arg))
                     RootOpen(arg);
             }
             catch (Exception ex)
@@ -300,7 +319,7 @@ namespace GCRebuilder
                     success = GenerateTOC();
                 else
                     if (success)
-                        success = ReadTOC();
+                    success = ReadTOC();
 
             if (success)
             {
@@ -363,10 +382,10 @@ namespace GCRebuilder
                 e.Cancel = true;
             else
                 if (!rootOpened)
-                    if (toc.fils[Convert.ToInt32(selNode.Name)].isDir)
-                        miImport.Enabled = false;
-                    else
-                        miImport.Enabled = true;
+                if (toc.fils[Convert.ToInt32(selNode.Name)].isDir)
+                    miImport.Enabled = false;
+                else
+                    miImport.Enabled = true;
         }
 
         private void tvTOC_MouseDown(object sender, MouseEventArgs e)
@@ -547,6 +566,34 @@ namespace GCRebuilder
                 Export(idx, "");
         }
 
+        public void SetSelectedNode(string name)
+        {
+            string fullName = name.Replace(sio.Path.AltDirectorySeparatorChar, sio.Path.DirectorySeparatorChar);
+            string[] parts = fullName.Split(sio.Path.DirectorySeparatorChar);
+            TreeNode node = GetNodeByText(null, parts[0]);
+
+            for (int i = 1; i < parts.Length; i++)
+            {
+                if (node == null)
+                    break;
+
+                node = GetNodeByText(node, parts[i]);
+            }
+            selNode = node;
+        }
+
+        private TreeNode GetNodeByText(TreeNode node, string text)
+        {
+            TreeNodeCollection collection = (node == null) ? tvTOC.Nodes : node.Nodes;
+
+            foreach (TreeNode item in collection)
+            {
+                if (item.Text.Equals(text))
+                    return item;
+            }
+            return null;
+        }
+
         private void miImpFT_Click(object sender, EventArgs e)
         {
 
@@ -577,6 +624,7 @@ namespace GCRebuilder
             {
                 imgPath = sfd.FileName;
                 miRootSave.ToolTipText = imgPath;
+                showLastDialog = true;
                 imgChecked = true;
                 if (resChecked && imgChecked)
                     miRootStart.Enabled = true;
@@ -673,7 +721,15 @@ namespace GCRebuilder
 
         private void miHelpAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nintendo GameCube images rebuilder v1.0\r\nCreated by BSV (bsv798@gmail.com)", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string msg = "Nintendo GameCube images rebuilder v1.1\r\n"
+                + "Created by BSV (bsv798@gmail.com)\r\n"
+                + "\r\n"
+                + "Supported command line parameters:\r\n"
+                + "    export file/folder from image: iso_path [node_path e file_or_folder]\r\n"
+                + "    import file into image: iso_path [node_path i file_or_folder]\r\n"
+                + "    rebuild image: root_path [iso_path]\r\n";
+
+            MessageBox.Show(msg, "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         #endregion

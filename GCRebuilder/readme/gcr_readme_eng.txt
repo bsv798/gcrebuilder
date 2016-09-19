@@ -1,10 +1,10 @@
-GameCube Rebuilder version 1.0 by BSV (bsv798@gmail.com)
-Compiled: July 2009.
+GameCube Rebuilder version 1.1 by BSV (bsv798@gmail.com)
+Compiled: September 2016.
 ---------------------------------------------------------
 
 GameCube Rebuilder tool (GCR next) allows you to edit Nintendo GameCube images.
-It was witten with Visual C# v3.0 and thus REQUIRES a Microsoft .NET Framework v3.5 or newer installed.
-You can get it for free at http://msdn.microsoft.com/en-us/netframework/default.aspx
+It was witten with Visual C# v5.0 and thus REQUIRES a Microsoft .NET Framework v4.5.2 or newer installed.
+You can get it for free at https://www.microsoft.com/ru-ru/download/details.aspx?id=42642
 
 
 Main features:
@@ -139,6 +139,8 @@ Options -> Do not use 'game.toc'
 
 - Shows a short info about GCR.
 
+- Shows command line interface parameters.
+
 ---------------------------------------------------------
 "Image details" field:
 ---------------------------------------------------------
@@ -207,14 +209,16 @@ Some useful advices:
 
 - To pause/cancel any cancelable operation, just press ESC.
 
+- Use command line interface to automate your work.
+
 
 *********************************************************************
 
 You can find the latest versions of GCR at following websites:
 
-- http://www.shedevr.org.ru/zelda64rus/downloads.html#romhacking_gc 
+- http://shedevr.org.ru/zelda64rus/downloads.html#romhacking_gc
 (this site is in russian, but you'll find the tool easily).
-- http://www.romhacking.net/?category=&Platform=33&game=&author=&os=&level=&perpage=20&page=utilities&utilsearch=Go&title=&desc=
+- http://www.romhacking.net/?page=utilities&platform=33&author=1147
 
 *********************************************************************
 
@@ -233,7 +237,10 @@ Thanks to:
 Version history:
 ---------------------------------------------------------
 
-Version 1.0 (This release) - July, 11, 2009.
+Version 1.1 - September, 19, 2016
+Command line interface support.
+
+Version 1.0 - July, 12, 2009.
 First public release.
 
 
@@ -251,4 +258,4 @@ In such cases, you MUST ask it's author (BSV - bsv798@gmail.com) first.
 
 
 
-(c) 2009 BSV, All rights reserved.
+(c) 2016 BSV, All rights reserved.
